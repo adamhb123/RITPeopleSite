@@ -1,0 +1,54 @@
+* {
+	overflow: hidden;
+}
+
+body {
+	position: absolute;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("../rsc/background.gif");
+}
+
+img[id="sleep"] {
+	width: 100px;
+	border-radius: 100%;
+	animation-name: spin, hueRotation;
+	animation-duration: 1000ms, 4000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	position: absolute;
+}
+@keyframes verticalFloatyWoaty {
+	from {
+		top: -10%;
+	}
+	to {
+		top: 100%;
+	}
+}
+@keyframes horizontalFloatyWoaty {
+	from {
+		left: -10%;
+	}
+	to {
+		left: 100%;
+	}
+}
+@keyframes hueRotation{
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes spin{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
